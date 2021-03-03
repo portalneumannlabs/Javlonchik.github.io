@@ -1,0 +1,445 @@
+/* ============= VAR CSS =============== */
+:root{
+    --fm: 'Raleway', sans-serif;
+    --fm-thin: 100;
+    --fm-light: 300;
+    --fm-regul: 400;
+    --fm-bold: 700;
+    --fm-black: 900;
+    --green_75: rgba(105, 207, 23, 0.75); /* LINK UCHUN BACKGROUND */
+    --green_90: rgba(105, 207, 23, 0.90); /* GAMBURGER UCHUN BACKGROUND */
+    --green: #69cf17; /* LINK UCHUN RANG */
+    --green_1: #62be19; /*  LOGO BORDER */
+    --green_2: #4e9f0d; /* LOGO BACKGROUND */
+    --gray-p: #dedede; /* HEADER PARAGRAFI UCHUN */
+    --gray: #7a7a7a; /* SECTION LINKI UCHUN */
+    --white: #fff; /*  */
+    --dark: #060002; /* BODY BACKGROUND */ 
+    --black: rgba(30, 30, 30, 0.1); /* BOX-SHADOW ICHKI QISMI UCHUN */
+    --col-1: calc(100% / 12 * 1);
+    --col-2: calc(100% / 12 * 2);
+    --col-3: calc(100% / 12 * 3);
+    --col-4: calc(100% / 12 * 4);
+    --col-5: calc(100% / 12 * 5);
+    --col-6: calc(100% / 12 * 6);
+    --col-7: calc(100% / 12 * 7);
+    --col-8: calc(100% / 12 * 8);
+    --col-9: calc(100% / 12 * 9);
+    --col-10: calc(100% / 12 * 10);
+    --col-11: calc(100% / 12 * 11);
+    --col-12: calc(100% / 12 * 12);
+}   
+/* ============== VAR CSS END =================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 320px;
+    font-family: var(--fm);
+    background: var(--dark);
+}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* ====================== justify ================= */
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-start{
+    justify-content: flex-start;
+}
+
+/* ============== align-items ==================== */
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-start  {
+    align-items: flex-start;
+}
+
+/* ============ flex-direction ============== */
+.flex-direction-column{
+    flex-direction: column;
+}
+
+/* ============== col- ================= */
+.col-4{
+    width: var(--col-4);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-12{
+    width: var(--col-12);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-6{
+    width: var(--col-6);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* ============ HEADER ============== */
+header{
+    width: 100%;
+    min-height: 770px;
+    background: url('../img/header-bg.jpg') no-repeat center 50px / cover;
+}
+
+.logo{
+    color: var(--white);
+    font-weight: var(--fm-bold);
+    font-size: 24px;
+    text-transform: uppercase;
+    border: 3px solid var(--green_1);
+    background: var(--green_2);
+    padding: 11px 21px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 25px var(--black);
+    line-height: 17px;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a{ 
+    color: var(--green);
+    font-size: 20px;
+    font-weight: var(--fm-light);
+    padding: 37px 26px 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+
+header nav ul li a:hover{
+    color: var(--white);
+    background: var(--green_75);
+}
+
+header nav ul li .active{
+    padding: 37px 11px 29px 10px;
+    color: var(--white);
+    background: var(--green_75);
+}
+
+header nav ul li .active:hover{
+    padding: 37px 11px 29px 10px;
+}
+
+header nav ul a span{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--green);
+    font-size: 20px;
+    font-weight: var(--fm-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6px;
+}
+
+/* ================= */
+
+header h1{
+    color: var(--green);
+    font-weight: var(--fm-black);
+    font-size: 72px;
+    margin-top: 150px;
+}
+
+header p:first-of-type{
+    color: var(--green);
+    font-weight: var(--fm-regul);
+    font-size: 36px;
+}
+
+/* :nth-of-type(2) */
+
+header p:nth-of-type(2){
+    color: var(--gray-p);
+    font-weight: var(--fm-regul);
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 28px;
+}
+
+header .header_price{
+    background: var(--green_75);
+    font-weight: var(--fm-thin);
+    padding: 28px 90px;
+    font-size: 60px;
+    line-height: 43px;
+    margin-top: 75px;
+    color: var(--white);
+}
+
+/* =============== MAIN ============ */
+
+main ul{
+    margin: 50px 0 69px !important;
+}
+
+main ul li{
+    margin-right: 48px;
+}
+
+main ul li a{
+    font-weight: var(--fm-bold);
+    font-size: 20px;
+    color: var(--gray);
+    transition: 500ms;
+}
+
+main ul li a:hover,
+main ul li a.active{
+    color: var(--green);
+}
+
+main .section_img{
+    width: 100%;
+    height: 234px;
+    position: relative;
+    border: 1px solid #4b4b4b;;
+}
+
+main .section_img img{
+    width: 100%;
+    height: 100%;
+}
+
+main .section_img .price{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   color: white;
+}
+
+main .section_img .price span{
+    display: block;
+    padding: 20px 58px;
+    background: var(--green_75);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+main .section_img button{
+    width: 100%;
+    height: 100%;
+    background: var(--green_90);
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: 500ms;
+}
+
+main .section_img button:focus{
+    outline: none;
+}
+
+main .section_img:hover button{
+    opacity: 1;
+}
+
+main .section_img:hover .price{
+    opacity: 0;
+}
+
+main section h2{
+    margin: 30px 0 15px;
+    color: var(--green);
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+main section p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--gray-p);
+    margin-bottom: 50px;
+}
+
+/* ======= SECTION ========= */
+
+.section{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),  rgba(0, 0, 0, 0.7 )), url('../img/back-customers.jpg') no-repeat center center / cover;
+}
+
+.section h2{
+    color: var(--green);
+    font-size: 36px;
+    font-weight: 700;
+    margin: 50px 0 48px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section h2::after{
+    margin-top: 19px;
+    content: "";
+    display: block;
+    max-width: 50%;
+    width: 100%;
+    height: 1px;
+    background: var(--green);
+}
+
+.section p{
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+    color: white;
+}
+
+.section p:nth-of-type(2){
+    margin: 29px 0 102px;
+}
+
+/* ======= SECTION MAP ============== */
+
+.map h2{
+    padding: 50px 0 58px;
+    background: white;
+    font-size: 36px;
+    color: var(--green);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ========= FOOTER ============ */
+footer .footer_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer .footer_info .phone{
+    font-weight: 700;
+    color: var(--green_2);
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .footer_nav{
+    margin-top: 50px;
+}
+
+footer .footer_nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .footer_nav ul li{
+    margin-right: 49px;
+}
+
+footer .footer_nav ul li a{
+    font-size: 18px;
+    font-weight: var(--fm-thin);
+    color: var(--white);
+    transition: 500ms;
+}
+
+footer .footer_nav ul li a:hover{
+    color: var(--green);
+}
+
+footer p{
+    font-size: 16px;
+    font-weight: 100;
+    margin: 40px 0 50px;
+    color: white;
+}
+
+
+/* MEDIA SCREEN */
+@media (max-width: 992px){  /* LG */
+    .col-lg-6{
+        width: var(--col-6);
+    }
+    .row{
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px){  /* MD */
+    .d-md-none{
+        display: none;
+    }
+    header .logo{
+        margin-top: 20px;
+        align-items: center;
+    }
+    main ul li, 
+    footer ul li{
+        margin-top: 20px;
+    }
+    .col-md-12{
+        width: var(--col-12);
+    }
+    .md-justify-content-center{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px){   /* SM */
+    h1{
+        font-size: 45px;
+    }
+    header .header_price{
+        font-size: 35px;
+    }
+    .sm-footer_info{
+        flex-direction: column;
+    }
+    .footer_info .logo{
+        margin-bottom: 20px;
+    }
+}

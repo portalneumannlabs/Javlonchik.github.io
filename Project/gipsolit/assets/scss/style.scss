@@ -1,0 +1,546 @@
+$btn-color: #fdb303;
+$color-green-1: #70c849; // price header
+$color-green-2: #44b513; // icons
+$color-green-3: #358015; //  100% included
+$color-green-4: #286b0a; // service bg
+$color-green-5: #49bf15; // feedback-arrows
+$color-green-6: #6ba253; // material-link
+
+$primary-text: #292929; 
+$secondary-text: #1a1820;
+$gray-text: #989898;
+
+$input-border: #dddddd;
+$danger-border: #e8e8e8;
+
+$bold-text: 'bold';
+$regular-text: 'reg';
+$light-text: 'light';
+$semibold-text: 'semibold';
+
+@import "../fonts/stylesheet.css";
+
+@mixin yellow_button {
+    &,
+    &:link,
+    &:visited{
+    background: $btn-color;
+    color: #fff !important;
+    font-size: 0.75em;
+    padding: 1.2em 1.6em;
+    font-family: $semibold-text;
+    transition: .2s;
+    border: 2px solid transparent;
+    border-radius: 0.4rem;
+    display: inline-block;
+    
+    }
+    &:hover{
+    text-decoration: none;
+    border: 2px solid $btn-color;
+    background: transparent;
+    color: $btn-color !important;
+    }
+    &:active,
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-family: $regular-text;
+    font-size: 16px;
+    color: $primary-text;
+}
+/* HEADER */
+#header{
+    background: url('../img/header-bg.jpg') no-repeat;
+    background-position: -18.75em 0;
+    background-size: cover;
+    width: 100%;
+    .navbar-toggler{
+        border: 2px solid &$primary-text !important;
+        background: $color-green-1;    
+        &:focus{
+        outline: none;
+        }
+    }
+    .nav-link{
+        &,
+        &:link,
+        &:visited{
+            color: $primary-text;
+            font-family: $bold-text;
+            font-size: 1.25em;
+            transition: .2s;
+        }
+        &:hover{
+            color: $primary-text;
+            text-decoration: underline;
+        }
+    }
+    .btn-yellow{
+        @include yellow_button();
+    }
+    .header-text{
+        font-size: 1.5em;
+        width: 53%;
+    }
+    
+    .header-box{
+        background: $color-green-1;
+        font-size: 1.2em;
+        width: 42%;
+        span{
+            font-size: 1.8rem;
+        }
+    }
+    
+    .payment{
+        font-size: 1.3em;
+        font-family: $bold-text;
+    }
+}
+
+.form-info{
+    font-size: 1.125em;
+    span{
+        font-family: $bold-text;
+    }
+    .form-footer{
+        font-size: 0.75rem !important;
+        font-family: $bold-text;
+    }
+    
+    .work-days{
+        font-size: 0.75rem !important;
+    }
+}
+
+h1{
+    font-size: 2.5em;
+    font-family: $bold-text;
+}
+.group-input-1{
+    position: relative;
+    .form-label-1{
+        font-size: 0.8rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10px;
+    }
+}
+.group-input-2{
+    position: relative;
+    .form-label-2{
+        font-size: 0.8rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10px;
+    }
+}
+.form-control:focus,
+.form-control:active{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid $color-green-1;
+    & + label{
+        color: $btn-color;
+    }
+}
+.submit{
+    @include yellow_button();
+    font-size: 1rem !important;
+}
+
+/* FEATURES */
+
+#features{
+    padding: 6em 0 7.5em;
+    img{
+        height: 66px;
+    }
+    p{
+        color: $secondary-text;
+        margin: 0;
+       
+    }
+}
+.green-colored-link{
+    color: $color-green-6;
+    text-decoration: underline;
+    &:hover{
+        color: $color-green-3;
+    }
+}
+h2{
+    font-size: 2.25em;
+    font-family: $bold-text;
+}
+h5{
+    font-size: 1.25em;
+    font-family: $bold-text;
+}
+
+/* COST */ 
+
+#price{
+    background: url('../img/bg-green.jpg');
+    padding: 6.25em 0 5em;
+    .cost-btn{
+        font-size: 1rem !important;
+        @include yellow_button();
+        margin-top: 0.625rem;
+    }
+    .card{
+        border-radius: 0;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.15);
+        .card-text{
+            font-size: 1.1875em;
+            font-family: $bold-text;
+            span{
+                font-size: 1.875rem;
+            }
+        }
+        .card-body{
+            ul{
+                height: 10em;
+                li{
+                    list-style: none;
+                    margin-bottom: 0.3125rem;
+                    font-size: 1.125em;
+                    &::before{
+                        content: url('../img/check.png');
+                        margin-right: 0.625em;
+                    }
+                    
+                }
+                
+            }
+            .card-btn{
+                font-size: 1.125rem !important;
+                @include yellow_button();
+                padding: 1.2rem 3rem !important;
+            }
+        }
+        
+    }
+}
+
+/* FEEDBACK */ 
+
+#feedback{
+    background: url('../img/bg-white.jpg');
+    padding: 6.25em 0;
+    position: relative;
+    .carousel{
+        padding: 3.125em;
+        box-shadow: 0px 12px 18px 0px rgba(0, 0, 0, 0.11);
+        position: relative;
+        .content{
+            .content-left{
+                height: 25em;
+            }
+            .content-right{
+                ul{
+                    li{
+                        margin-bottom: 1rem;
+                        color: $secondary-text;
+                        span{
+                            font-family: $bold-text;
+                        }
+                    }
+                }
+                .customer{
+                    .customer-info{
+                        p{
+                            font-size: 0.875rem;
+                        }
+                        h6{
+                            font-family: $bold-text;
+                        }
+                    }
+                }
+                .comment{
+                    font-size: 0.9em;
+                    border: 3px solid $color-green-5;
+                    padding: 0.9375rem 0.625rem;
+                    position: relative;
+                    
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        margin-top: -1.6875rem;
+                        margin-left: 1.875rem;
+                        border-left: -5px solid transparent;
+                        border-right: 25px solid transparent;
+                        border-bottom: 10px solid $color-green-5;
+                    }
+                }
+            }
+        }
+        .carousel-control-prev,
+        .carousel-control-next{
+            background: $color-green-5;
+            opacity: 1;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3.125rem;
+            height: 3.75rem;
+        }
+        .carousel-control-prev{
+            left: -4.5%;
+        }
+        .carousel-control-next{
+            right: -4.5%;
+        }
+    }
+    .form-feedback{
+        width: 70%;
+        margin: 0 auto;
+        padding: 3.125em 7.5em;
+        .form-group{
+            width: 50%;        
+        }
+    }
+    .feedback-img{
+        position: absolute;
+        bottom: 0;
+        left: -6%;
+    }
+}
+
+h4{
+    font-size: 1.375em;
+    font-family: $bold-text;
+}
+
+/* WORK PLAN */ 
+
+#work-plan{
+    position: relative;
+    padding: 6.25em 0 4.375em;
+    .work-icon{
+        height: 6.25em;
+    }
+    .work-title-text{
+        font-size: 1.2em;
+    }
+    .work-process-img{
+        position: absolute;
+        bottom: -8.75em;
+        right: -18.75em;
+        z-index: -1;
+    }
+}
+
+/* SERVICE */ 
+
+#service{
+    background: #f5f5f5;
+    padding: 5em 0;
+    
+    .green-header{
+        color: $color-green-3;
+    }
+    
+    .circle{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $color-green-3;
+        color: #fff;
+        font-family: $bold-text;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .circled-border{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: transparent;
+        border: 2px solid $color-green-3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-text{
+        h5{
+            font-size: 1rem;
+        }
+        p{
+            font-size: 0.8125em;
+            font-family: $light-text;
+        }
+    }
+}
+
+/* DANGER */
+
+h3{
+    font-size: 1.3125em;
+    font-family: $bold-text;
+}
+
+#danger{
+    padding: 5em 0;
+    position: relative;
+    .problems-list{
+        border: 4px solid $danger-border;
+        height: 23.75em;
+        .problems-heading{
+            color: $gray-text;
+        }
+        ul{
+            li{
+                display: flex;
+                margin-bottom: 3em;
+                &::before{
+                    content: url('../img/cancel.png');
+                    flex-shrink: 0;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .solutions-list{
+        border: 4px solid $color-green-3;
+        height: 23.75em;
+        ul{
+            li{
+                display: flex;
+                margin-bottom: 1.2em;
+                &::before{
+                    content: url('../img/check.png');
+                    flex-shrink: 0;
+                    margin-right: 0.625em;
+                }
+            }
+        }
+    }
+    .worker{
+        position: absolute;
+        left: 47%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+}
+
+/* MATERIAL */ 
+
+#material{
+    background: url('../img/bg-white.jpg');
+    padding: 5em 0 4em 0;
+    p{
+        font-size: 1.1875em;
+    }
+    img{
+        height: 11em;
+    }
+    .bold-text{
+        span{
+            font-family: $bold-text;
+        }
+    }
+    .price-info{
+        span{
+            font-family: $bold-text;
+        }
+    }
+}
+
+/* WORK PROCESS */ 
+
+#work-process{
+    background: url('../img/work-bg.jpg') no-repeat top center;
+    background-size: cover;
+    padding: 7em 0;
+    .text-big{
+        font-size: 1.3em;
+    }
+    .form-footer{
+        font-size: 0.75rem !important;
+        font-family: $bold-text;
+    }
+}
+
+/* ADDITIONAL SERVICES */
+
+#additional-services{
+    background: $color-green-4;
+    padding: 7em 0 5em;
+    
+    .service-price{
+        font-size: 1rem !important;
+        @include yellow_button();
+        padding: 1em 3.3em !important;
+    }
+}
+
+/* CONTACTS */
+
+#contacts{
+    background: url('../img/contact-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 5em 0;
+    .address{
+        font-size: 1.125em;
+    }
+    .phone{
+        font-size: 1.125em;
+        span{
+            font-family: $bold-text;
+        }
+    }
+    .email{
+        font-size: 1.125em;
+        span{
+            text-decoration: underline;
+        }
+    }
+    .inn{
+        font-size: 1.125em;
+    }
+    
+    
+    .form-control:focus,
+    .form-control:active{
+        outline: none;
+        box-shadow: none;
+        border: 1px solid $color-green-1;
+        & + label{
+            color: $btn-color;
+        }
+        & + p{
+            color: $btn-color;
+        }
+    }
+}
+
+/* FOOTER */ 
+#footer{
+    .footer-info{
+        span{
+            font-size: 1.25em;
+            font-family: $bold-text;
+        }
+        a{
+            color: $primary-text;
+            text-decoration: underline;
+            font-size: 1.0625em;
+        }
+        p{
+            text-decoration: underline;
+            font-size: 1.0625em;
+        }
+    }
+}

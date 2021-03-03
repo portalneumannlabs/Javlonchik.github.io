@@ -1,0 +1,129 @@
+@media (max-width: 1199.98px){ 
+    /* lg */
+    body, html{
+        font-size: 15px;
+    }
+    .carousel-control-prev{
+        left: -5% !important;
+    }
+    .carousel-control-next{
+        right: -5% !important;
+    }
+    .form-feedback{
+        width: 80% !important;
+    }
+    .feedback-img{
+        left: -15% !important;
+    }
+    .work-process-img{
+        right: -17em !important;
+    }
+    .worker{
+        left: 45% !important;
+    }
+   
+}
+@media (max-width: 991.98px){
+    /* md */
+    #header{
+        background-position: center center;
+    }
+    .header-text{
+        width: 100% !important;
+    }
+    .header-box{
+        margin: 0 auto;
+    }
+    .form-info,
+    .header-form{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .carousel{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .carousel-control-prev{
+        left: -7% !important;
+    }
+    .carousel-control-next{
+        right: -7% !important;
+    }
+    .form-feedback{
+        width: 95% !important;
+        padding: 2em 5.5em !important;
+    }
+    .feedback-img{
+        left: -30% !important;
+    }
+    .worker{
+        bottom: 39.5% !important;
+        left: 70% !important;
+    }
+
+}
+@media (max-width: 767.98px){
+    /* sm */
+    #header{
+        background-position: bottom center;
+    }
+    .carousel{
+        width: 100%;
+        padding: 2em !important;
+    }
+    .content-left{
+        height: 20em !important;
+    }
+    .carousel-control-prev{
+        display: none;
+    }
+    .carousel-control-next{
+        display: none;
+    }
+    .form-feedback{
+        width: 100% !important;
+    }
+    .feedback-img{
+        left: -45% !important;
+    }
+    .form-feedback .form-group{
+        width: 100% !important;    
+        display: block !important;
+    }
+    .worker{
+        display: none;
+    }
+    #work-process{
+    background-position: bottom right;
+    }
+    .form-info,
+    .header-form{
+        width: 90%;
+    }
+}
+@media (max-width: 575.98px){
+    /* col */
+    body, html{
+        font-size: 12px;
+    }
+    .content-left{
+        margin-bottom: 3em;
+    }
+    .comment::before{
+        margin-top: -1.9rem !important;
+    }
+    .feedback-img{
+        display: none;
+    }
+    .work-process-img{
+        display: none;
+    }
+    .problems-list,
+    .solutions-list{
+        height: 25em !important;
+    }
+    .content-left,
+    .content-right{
+        width: 100% !important;
+    }    
+}
