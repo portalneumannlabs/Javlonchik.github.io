@@ -1,0 +1,90 @@
+.slider{
+    background-image: url('../img/slider-fon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 50rem;
+    
+    &__inner{
+        position: relative;
+    }
+    &__item-content{
+        padding-top: 11rem;
+        max-width: 66.5rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__item{
+        outline: none;
+    }
+    &__title{
+        text-transform: uppercase;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        color: $color-white;
+        font-weight: 500;
+        margin-bottom: 2.2rem;
+        letter-spacing: 1.5px;
+        font-family: 'Roboto', sans-serif;   
+        
+        @include respond(max-414){
+            font-size: 2.4rem;
+        }
+    }
+    &__text{
+        font-size: 1.8rem;
+        color: $color-grey-light-2;
+        margin-bottom: 5rem;
+        line-height: 2.4rem;
+        @include respond(max-414){
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.slider .slick-btn{
+    @include respond(max-900){
+        display: none !important;
+    }
+}
+
+.slick-btn{
+    position: absolute;
+    top: 70%;
+    z-index: 3;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid $color-white;
+    background-color: $color-yellow;
+    color: $color-white;
+    cursor: pointer;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.slick-next{
+    right: 0;
+    &::before{
+        content: "\f105";
+        font-family: 'icomoon';
+    }
+}
+.slick-prev{
+    left: 0;
+    &::before{
+        content: "\f104"; 
+        font-family: 'icomoon';  
+    }
+}
+.slick-btn.slick-disabled{
+    cursor: default;
+    background-color: transparent;
+}
