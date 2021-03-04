@@ -1,0 +1,134 @@
+.services {
+    padding: 5rem 0 3rem;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+        
+        @include respond(max-900){
+            display: block;
+        }
+    }
+
+    &__title-box {
+        max-width: 52rem;
+        padding-left: 14rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 10rem;
+            height: .2rem;
+            background-color: $color-yellow;
+            left: 0;
+            top: 1.1rem;
+            @include respond(max-900){
+               display: none;
+            }
+        }
+        @include respond(max-900){
+            padding-left: 0;
+            text-align: center;
+            margin: 0 auto 3rem;
+        }
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-family: 'Roboto';
+        font-weight: 500;
+        line-height: 2.4rem;
+        color: $color-black-dark-2;
+        margin: 0;
+    }
+
+    &__text {
+        letter-spacing: 0.1px;
+    }
+
+    &__btn {
+        a {
+            color: $color-grey-dark-2;
+            line-height: 2.4rem;
+            letter-spacing: 0.25px;
+            padding: 0.5rem 3.8rem;
+            border: 3px solid #e6e6e6;
+            font-family: 'Roboto', sans-serif;
+        }
+        @include respond(max-900){
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        @include respond(max-1156){
+            display: block;
+        }
+    }
+
+    &__item {
+        max-width: 36rem;
+        text-align: center;
+        padding: 3rem 0 8rem;
+        position: relative;
+        min-height: 37.5rem;
+        background-color: $color-item-box-bg;
+        box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);
+        
+        @include respond(max-1156){
+            min-height: 33rem;
+            max-width: 80%;
+            margin: 3rem auto;
+        }
+        @include respond(max-600){
+            min-height: 37.5rem;
+            max-width: 100%;
+            margin: 3rem auto;
+        }
+    }
+    img{
+        min-height: 5.4rem;
+    }
+    
+    &__item-title {
+        margin: 0;
+        color: $color-black-dark-2;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        padding: 2.4rem 0;
+    }
+
+    &__item-text {
+        margin: 0;
+        color: $color-grey-dark;
+        letter-spacing: 0.1px;
+        padding: 0 3rem 3rem;
+    }
+
+    &__item-btn {
+        position: absolute;
+        bottom: 4rem;
+        left: 0;
+        right: 0;
+        .default-btn{
+            color: $color-grey-dark-2;
+            &::after{
+                color: $color-white;
+            }
+        }
+    }
+
+    &__item-link {
+        color: $color-grey-dark-2;
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 1px solid $color-grey-dark-2;
+        margin-right: 6rem;
+    }
+}
