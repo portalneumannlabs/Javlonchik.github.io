@@ -1,0 +1,38 @@
+ // 700px / 16px = 43.75em
+ 
+@mixin respond($breakpoint) {
+    @if $breakpoint == max-1156 {
+        @media (max-width: 72.25em){ @content }; // 1156px
+    }
+    @if $breakpoint == max-1050 {
+        @media (max-width: 65.625em){ @content }; // 1050px
+    }
+    @if $breakpoint == max-900 {
+        @media (max-width: 56.25em){ @content }; // 900px
+    }
+    @if $breakpoint == max-840 {
+        @media (max-width: 52.5em){ @content }; // 840px
+    }
+    @if $breakpoint == max-700 {
+        @media (max-width: 43.75em){ @content }; // 700px
+    }
+    @if $breakpoint ==  min-700{
+        @media (min-width: 43.75em){ @content }; // min 700px
+    }
+    @if $breakpoint == max-600 {
+        @media (max-width: 37.5em){ @content }; // 600px
+    }
+    @if $breakpoint == max-540 {
+        @media (max-width: 33.75em){ @content }; // 540px
+    }
+    @if $breakpoint == max-414 {
+        @media (max-width: 25.875em){ @content }; // 414px
+    }
+    @if $breakpoint == max-400 {
+        @media (max-width: 25em){ @content }; // 400px
+    }
+    @if $breakpoint == max-375 {
+        @media (max-width: 23.4375em){ @content }; // 375px
+    }
+    
+}
