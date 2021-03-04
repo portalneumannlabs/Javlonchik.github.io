@@ -1,0 +1,61 @@
+.advantages{
+    padding: 5.5rem 0 4rem;
+    background-image: url('../img/adv-fon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 28.5rem;
+    
+    &__inner{
+        color: $color-white;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        @include respond(max-900){
+           display: block;
+        }
+       
+    }
+    &__item{
+        max-width: 36rem;
+        padding: 0 2rem;
+        
+        @include respond(max-900){
+            max-width: 100%;
+            margin-bottom: 8rem;
+        }
+        @include respond(max-400){
+            padding: 0;
+        }
+    }
+    &__title{
+        margin: 0;
+        font-size: 1.8rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        line-height: 2.4rem;
+        margin: 6rem 0 1.5rem;
+        position: relative;
+        
+        &::before{
+            content: "\f00c";
+            font-family: 'icomoon';
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            border: 2px solid $color-yellow;
+            left: 50%;
+            top: -6rem;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__text{
+        margin: 0;
+        line-height: 2.4rem;
+        color: $color-grey-light-2;
+        letter-spacing: 0.1px;
+    }
+}
